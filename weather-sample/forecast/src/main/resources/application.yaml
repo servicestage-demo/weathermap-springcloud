@@ -1,0 +1,30 @@
+server:
+  port: 8876
+spring:
+  application:
+    name: forecast
+  rabbitmq:
+    host: ${mqhost:127.0.0.1}
+    port: ${mqport:5672}
+    username: ${mquser:rkd}
+    password: ${mqpassword:pwd}
+    ssl:
+      enabled: ${sslEnabled:false}
+      verify-hostname: false
+      validate-server-certificate: false
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    enabled: true
+    service-url:
+      defaultZone: ${eureka:http://localhost:8761/eureka/}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+hystrix:
+  stream:
+    queue:
+      send-id: false
