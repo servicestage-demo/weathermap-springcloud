@@ -6,6 +6,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     var proxy_host = process.env.HTTP_PROXY_HOST || '127.0.0.1';
     var proxy_port = process.env.HTTP_PROXY_PORT || '13092'; // 30101
+    var ssl_enable = process.env.SSL_ENABLE ? "https" : "http";
     var service_addr = process.env.SERVICE_ADDR || proxy_host + ":" + proxy_port
     console.log(proxy_host + ':' + proxy_port);
     console.log(req.query.city + ", " + req.query.type);
@@ -13,7 +14,7 @@ router.get('/', function (req, res, next) {
         host: proxy_host,
         port: proxy_port,
         method: 'GET',
-        path: 'http://' + service_addr + '/fusionweather/show?city=' + req.query.city,
+        path: ssl_enable + '://' + service_addr + '/fusionweather/show?city=' + req.query.city,
         headers: {}
     };
     if (req.query.user) {
