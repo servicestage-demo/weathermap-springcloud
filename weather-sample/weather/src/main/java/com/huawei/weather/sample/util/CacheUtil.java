@@ -18,7 +18,7 @@ public class CacheUtil
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(CacheUtil.class);
 
-    private static final int TIME_SPAN = 1800 * 1000;
+    private static final int TIME_SPAN = 10 * 1000;
 
     private Map<String, CurrentWeatherSummary> cacheMap = new ConcurrentHashMap<String, CurrentWeatherSummary>();
 
