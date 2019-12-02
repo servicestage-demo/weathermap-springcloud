@@ -1,6 +1,5 @@
 package com.huawei.weather.sample.util;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huawei.weather.sample.entity.objective.DateListItem;
 import com.huawei.weather.sample.entity.objective.ForecastSummary;
 import com.huawei.weather.sample.entity.original.ForecastData;
@@ -9,20 +8,11 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 /**
  * OpenWeatherMapClient
