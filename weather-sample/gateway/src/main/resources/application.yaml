@@ -8,10 +8,6 @@ spring:
     port: ${mqport:5672}
     username: ${mquser:rkd}
     password: ${mqpassword:pwd}
-    ssl:
-      enabled: ${sslEnabled:false}
-      verify-hostname: false
-      validate-server-certificate: false
 eureka:
   instance:
     prefer-ip-address: true
