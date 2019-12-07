@@ -4,5 +4,5 @@
   "mquser":"root",
   "mqpassword":"****",
   "eureka":"http://192.168.0.100:30115/eureka/",
-  "sslEnabled": "true"
+  "sslEnabled": "false"
 }
