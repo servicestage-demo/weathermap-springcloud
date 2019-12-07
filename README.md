@@ -29,6 +29,7 @@
 1. 登录ServiceStage，选择“基础设施 > 微服务引擎(CSE)”，单击“购买微服务引擎”。
 2. 消息中间件选择“RabbitMQ”，设置并记下用户名密码。
 3. HTTPS关闭，然后单击“立即购买”。
+   *如果开启HTTPS,则请在部署应用时把配置项中的sslEnabled设置为true*
 4. 引擎创建好后，点击引擎名字进入引擎基本信息界面，点击“服务类型”。
 5. 下载项目根目录下的weather-input.json文件，替换相应的参数。
    * mqhost:设置为引擎详情，“服务类型”下面的"messageQueue"的host
